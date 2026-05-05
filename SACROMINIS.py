@@ -77,7 +77,16 @@ def carregar_imagem(nome_arquivo):
 # --- 4. ESTRUTURA DO APLICATIVO ---
 
 # CABEÇALHO / HERO SECTION
-st.markdown("<h1>SACROMINIS</h1>", unsafe_allow_html=True)
+logo_img = carregar_imagem("logo_completa.PNG")
+if logo_img:
+    # Cria três colunas para centralizar a logo (a do meio é mais larga)
+    col_esq, col_centro, col_dir = st.columns([1, 2, 1])
+    with col_centro:
+        st.image(logo_img, use_container_width=True)
+else:
+    # Fallback: Se a logo não for encontrada, exibe o texto
+    st.markdown("<h1>SACROMINIS</h1>", unsafe_allow_html=True)
+
 st.markdown("<p class='quote-text'>ESTATUÁRIA DE LEGADO TÁTICO E SACRO</p>", unsafe_allow_html=True)
 st.markdown("<p class='quote-text'>\"Onde a Inteligência Arquiteta o Legado e a Mão Forja a Honra\"</p>", unsafe_allow_html=True)
 
