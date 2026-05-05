@@ -97,28 +97,17 @@ st.markdown("<p class='quote-text'>\"Onde a Inteligência Arquiteta o Legado e a
 
 st.markdown("<br><hr><br>", unsafe_allow_html=True)
 
-# SEÇÃO 1: O NÚCLEO INEGOCIÁVEL (MANIFESTO)
-col_vazia1, col_manifesto, col_vazia2 = st.columns([1, 4, 1])
-with col_manifesto:
-    st.markdown("""
-    <div class="manifesto-box">
-        <h3 style='margin-top:0;'>A Crença Central</h3>
-        <p>A verdadeira honra e devoção não podem ser produzidas em massa; elas exigem o sacrifício do tempo e a união do rigor intelectual com a maestria manual para forjar um legado físico.</p>
-        <br>
-        <p><b>O Inimigo Combatido:</b> A banalização do legado — a cultura das "lembrancinhas" feitas às pressas, a produção em massa sem alma.</p>
-        <p><b>A Promessa:</b> Transformar resina bruta em relicários e tributos que ancoram a fé e a honra.</p>
-    </div>
-    """, unsafe_allow_html=True)
-
-st.markdown("<br><br>", unsafe_allow_html=True)
-
-# SEÇÃO 2: O ACERVO (PORTFÓLIO VISUAL)
-st.markdown("<h2>O ACERVO</h2>", unsafe_allow_html=True)
-
-# Abas para separar os nichos
-tab_sacro, tab_tatico = st.tabs(["✝️ Acervo Santos Católicos", "⚔️ Acervo Corporações Policiais"])
+# NAVEGAÇÃO CENTRAL VIA ABAS
+tab_sacro, tab_tatico, tab_crenca, tab_arquiteto, tab_contato = st.tabs([
+    "✝️ Santos Católicos", 
+    "⚔️ Corporações Policiais", 
+    "📜 Crença Central", 
+    "👤 O Arquiteto", 
+    "✉️ Contato"
+])
 
 with tab_sacro:
+    st.markdown("<h2>ACERVO SACRO</h2>", unsafe_allow_html=True)
     st.markdown("<p class='quote-text'>Representam fé, reverência, sacrifício e proteção.</p>", unsafe_allow_html=True)
     st.markdown("<br>", unsafe_allow_html=True)
     
@@ -139,6 +128,7 @@ with tab_sacro:
         col2.info("Imagem IMG_4665.PNG não encontrada no diretório.")
 
 with tab_tatico:
+    st.markdown("<h2>ACERVO TÁTICO</h2>", unsafe_allow_html=True)
     st.markdown("<p class='quote-text'>Representam honra, dever, legado e proteção.</p>", unsafe_allow_html=True)
     st.markdown("<br>", unsafe_allow_html=True)
     
@@ -151,41 +141,50 @@ with tab_tatico:
     else:
         col_tat_2.info("Imagem IMG_4672 2.jpg não encontrada no diretório.")
 
-st.markdown("<br><hr><br>", unsafe_allow_html=True)
+with tab_crenca:
+    st.markdown("<h2>A CRENÇA CENTRAL</h2>", unsafe_allow_html=True)
+    col_vazia1, col_manifesto, col_vazia2 = st.columns([1, 4, 1])
+    with col_manifesto:
+        st.markdown("""
+        <div class="manifesto-box">
+            <h3 style='margin-top:0;'>O Núcleo Inegociável</h3>
+            <p>A verdadeira honra e devoção não podem ser produzidas em massa; elas exigem o sacrifício do tempo e a união do rigor intelectual com a maestria manual para forjar um legado físico.</p>
+            <br>
+            <p><b>O Inimigo Combatido:</b> A banalização do legado — a cultura das "lembrancinhas" feitas às pressas, a produção em massa sem alma.</p>
+            <p><b>A Promessa:</b> Transformar resina bruta em relicários e tributos que ancoram a fé e a honra.</p>
+        </div>
+        """, unsafe_allow_html=True)
 
-# SEÇÃO 3: O ARQUITETO DO LEGADO (SOBRE O FUNDADOR)
-st.markdown("<h2>O ARQUITETO DO LEGADO</h2>", unsafe_allow_html=True)
+with tab_arquiteto:
+    st.markdown("<h2>O ARQUITETO DO LEGADO</h2>", unsafe_allow_html=True)
+    col_bio1, col_bio2 = st.columns([2, 3])
 
-col_bio1, col_bio2 = st.columns([2, 3])
+    with col_bio1:
+        st.markdown("""
+        <div style="border: 1px solid #DAA520; padding: 50px; text-align: center; height: 100%; display: flex; align-items: center; justify-content: center;">
+            <span style="color: #DAA520; font-size: 1.2rem;">"Eu não sou mais um impressor de miniaturas.<br>Eu sou o arquiteto do legado e o artífice da honra."</span>
+        </div>
+        """, unsafe_allow_html=True)
 
-with col_bio1:
-    # Como não temos uma foto específica do fundador nas imagens anexadas, usamos um placeholder ou deixamos espaço
+    with col_bio2:
+        st.markdown("""
+        **Frederico Rabelo** une dois mundos que não admitem covardia ou falsidade: fé e linha de frente. Policial Militar e Cristão, nascido no interior de São Paulo, hoje reside no Distrito Federal.
+        
+        Com um profundo entendimento sobre hierarquia, dever e reverência, Frederico organiza seu tempo com rigor espartano. Dedica-se ao trabalho policial, aos estudos jurídicos contínuos, à criação de modelagem 3D e à pintura artística de figuras Sacras e Corporações Policiais.
+        
+        O ateliê da Sacrominis nasceu de uma necessidade singular: encontrar na arte a âncora para equilibrar a mente em um mundo sedento por atenção. Hoje, no silêncio do ateliê, ele forja os relicários da Sacrominis.
+        """)
+
+with tab_contato:
+    st.markdown("<h2>CONTATO E ÉTICA</h2>", unsafe_allow_html=True)
     st.markdown("""
-    <div style="border: 1px solid #DAA520; padding: 50px; text-align: center; height: 100%; display: flex; align-items: center; justify-content: center;">
-        <span style="color: #DAA520; font-size: 1.2rem;">"Eu não sou mais um impressor de miniaturas.<br>Eu sou o arquiteto do legado e o artífice da honra."</span>
+    <div style='text-align: center; padding: 30px; background-color: #FFFFFF; border: 1px solid #DAA520; border-radius: 5px; margin-top: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.05);'>
+        <h4 style='color: #DAA520;'>A Barreira Intransponível (Rigor Moral)</h4>
+        <p style='font-size: 0.9rem; color: #6A1B29; max-width: 800px; margin: 0 auto;'>
+            "A Sacrominis recusa absolutamente qualquer obra ou contrato, por mais lucrativo que seja, que vá contra a nobreza da Polícia Militar ou que vilipendie a fé católica."
+        </p>
+        <br>
+        <p style='color: #6A1B29; font-weight: bold;'>Para requerer uma obra ou obter o Certificado de Autenticidade, entre em contato.</p>
+        <a href="mailto:contato@sacrominis.com" style='color: #DAA520; text-decoration: none; border: 2px solid #DAA520; padding: 12px 25px; border-radius: 5px; display: inline-block; margin-top: 15px; font-weight: bold; transition: 0.3s;'>Solicitar Contato</a>
     </div>
     """, unsafe_allow_html=True)
-
-with col_bio2:
-    st.markdown("""
-    **Frederico Rabelo** une dois mundos que não admitem covardia ou falsidade: fé e linha de frente. Policial Militar e Cristão, nascido no interior de São Paulo, hoje reside no Distrito Federal.
-    
-    Com um profundo entendimento sobre hierarquia, dever e reverência, Frederico organiza seu tempo com rigor espartano. Dedica-se ao trabalho policial, aos estudos jurídicos contínuos, à criação de modelagem 3D e à pintura artística de figuras Sacras e Corporações Policiais.
-    
-    O ateliê da Sacrominis nasceu de uma necessidade singular: encontrar na arte a âncora para equilibrar a mente em um mundo sedento por atenção. Hoje, no silêncio do ateliê, ele forja os relicários da Sacrominis.
-    """)
-
-st.markdown("<br><br>", unsafe_allow_html=True)
-
-# SEÇÃO 4: RODAPÉ E CONTATO
-st.markdown("""
-<div style='text-align: center; padding: 20px; background-color: #FFFFFF; border-top: 1px solid #DAA520;'>
-    <h4 style='color: #DAA520;'>A Barreira Intransponível (Rigor Moral)</h4>
-    <p style='font-size: 0.9rem; color: #6A1B29; max-width: 800px; margin: 0 auto;'>
-        "A Sacrominis recusa absolutamente qualquer obra ou contrato, por mais lucrativo que seja, que vá contra a nobreza da Polícia Militar ou que vilipendie a fé católica."
-    </p>
-    <br>
-    <p style='color: #6A1B29;'>Para requerer uma obra ou obter o Certificado de Autenticidade, entre em contato.</p>
-    <a href="mailto:contato@sacrominis.com" style='color: #DAA520; text-decoration: none; border: 1px solid #DAA520; padding: 10px 20px; border-radius: 3px; display: inline-block; margin-top: 10px;'>Solicitar Contato</a>
-</div>
-""", unsafe_allow_html=True)
