@@ -196,7 +196,7 @@ with tab_contato:
             "A Sacrominis recusa absolutamente qualquer obra ou contrato, por mais lucrativo que seja, que vá contra a nobreza da Polícia Militar ou que vilipendie a fé católica."
         </p>
         <br>
-        <p style='color: #6A1B29; font-weight: bold;'>Para requerer uma obra ou obter o Certificado de Autenticidade, entre em contato.</p>
-        <a href="mailto:contato@sacrominis.com" style='color: #DAA520; text-decoration: none; border: 2px solid #DAA520; padding: 12px 25px; border-radius: 5px; display: inline-block; margin-top: 15px; font-weight: bold; transition: 0.3s;'>Solicitar Contato</a>
+        <p style='color: #6A1B29; font-weight: bold; margin-bottom: 5px;'>Mande uma mensagem para nós no Instagram:</p>
+        <a href="https://www.instagram.com/sacrominis" target="_blank" style='color: #DAA520; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: 0.3s;'>www.instagram.com/sacrominis</a>
     </div>
     """, unsafe_allow_html=True)
