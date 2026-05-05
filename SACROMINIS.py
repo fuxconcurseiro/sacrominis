@@ -116,7 +116,7 @@ st.markdown("<br><br>", unsafe_allow_html=True)
 st.markdown("<h2>O ACERVO</h2>", unsafe_allow_html=True)
 
 # Abas para separar os nichos
-tab_sacro, tab_tatico = st.tabs(["✝️ Santos Católicos", "⚔️ Corporações Policiais"])
+tab_sacro, tab_tatico = st.tabs(["✝️ Acervo Santos Católicos", "⚔️ Acervo Corporações Policiais"])
 
 with tab_sacro:
     st.markdown("<p class='quote-text'>Representam fé, reverência, sacrifício e proteção.</p>", unsafe_allow_html=True)
