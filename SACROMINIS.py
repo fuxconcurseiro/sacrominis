@@ -154,16 +154,11 @@ with tab_crenca:
 
 with tab_arquiteto:
     st.markdown("<h2>O ARQUITETO DO LEGADO</h2>", unsafe_allow_html=True)
-    col_bio1, col_bio2 = st.columns([2, 3])
+    
+    # Nova disposição: Texto/Citação na esquerda (maior) e Imagem na direita (menor)
+    col_texto, col_img = st.columns([3, 2])
 
-    with col_bio1:
-        st.markdown("""
-        <div style="border: 1px solid #DAA520; padding: 50px; text-align: center; height: 100%; display: flex; align-items: center; justify-content: center;">
-            <span style="color: #DAA520; font-size: 1.2rem;">"Eu não sou mais um impressor de miniaturas.<br>Eu sou o arquiteto do legado e o artífice da honra."</span>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col_bio2:
+    with col_texto:
         st.markdown("""
         **Frederico Rabelo** une dois mundos que não admitem covardia ou falsidade: fé e linha de frente. Policial Militar e Cristão, nascido no interior de São Paulo, hoje reside no Distrito Federal.
         
@@ -171,6 +166,23 @@ with tab_arquiteto:
         
         O ateliê da Sacrominis nasceu de uma necessidade singular: encontrar na arte a âncora para equilibrar a mente em um mundo sedento por atenção. Hoje, no silêncio do ateliê, ele forja os relicários da Sacrominis.
         """)
+        
+        st.markdown("<br>", unsafe_allow_html=True)
+        
+        # Citação recuada à esquerda com uma borda dourada elegante
+        st.markdown("""
+        <div style="border-left: 4px solid #DAA520; padding-left: 20px; margin-top: 10px;">
+            <span style="color: #DAA520; font-size: 1.2rem; font-style: italic;">"Eu não sou mais um impressor de miniaturas.<br>Eu sou o arquiteto do legado e o artífice da honra."</span>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col_img:
+        # Carrega a foto de perfil recém-adicionada
+        img_perfil = carregar_imagem("perfil.PNG")
+        if img_perfil:
+            st.image(img_perfil, use_container_width=True)
+        else:
+            st.info("Imagem 'perfil.PNG' não encontrada no diretório.")
 
 with tab_contato:
     st.markdown("<h2>CONTATO E ÉTICA</h2>", unsafe_allow_html=True)
