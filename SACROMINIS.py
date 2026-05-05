@@ -177,10 +177,13 @@ with tab_arquiteto:
         """, unsafe_allow_html=True)
 
     with col_img:
-        # Carrega a foto de perfil recém-adicionada
+        # Carrega a foto de perfil
         img_perfil = carregar_imagem("perfil.PNG")
         if img_perfil:
-            st.image(img_perfil, use_container_width=True)
+            # Aninhamento de colunas: 1 parte para a foto (33%), 2 partes vazias (66%)
+            col_foto_reduzida, col_vazia = st.columns([1, 2])
+            with col_foto_reduzida:
+                st.image(img_perfil, use_container_width=True)
         else:
             st.info("Imagem 'perfil.PNG' não encontrada no diretório.")
 
