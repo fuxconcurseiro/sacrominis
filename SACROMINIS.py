@@ -15,11 +15,16 @@ st.set_page_config(
 # Aqui garantimos que o app Streamlit tenha a cara do ateliê Sacrominis (Espartano, Solene, Dourado)
 custom_css = """
 <style>
-    /* Fundo escuro e fonte serifada para dar tom solene */
+    /* Fundo branco e fonte serifada para dar tom solene */
     .stApp {
-        background-color: #0b0c10;
-        color: #FFFFF0;
+        background-color: #FFFFFF;
+        color: #6A1B29; /* Cor Vinho/Bordô */
         font-family: 'Georgia', serif;
+    }
+    
+    /* Força a cor vinho nos parágrafos padrão do Streamlit */
+    .stMarkdown p, .stMarkdown li {
+        color: #6A1B29 !important;
     }
     
     /* Títulos em Dourado (#DAA520) */
@@ -41,7 +46,7 @@ custom_css = """
         border: 1px solid #DAA520;
         padding: 30px;
         border-radius: 5px;
-        background-color: rgba(218, 165, 32, 0.05);
+        background-color: rgba(218, 165, 32, 0.05); /* Leve fundo dourado bem transparente */
         text-align: center;
         margin-bottom: 20px;
     }
@@ -50,13 +55,13 @@ custom_css = """
     [data-testid="stImage"] img {
         border: 2px solid #DAA520;
         border-radius: 3px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suavizada para o fundo branco */
     }
     
     /* Texto centralizado para citações */
     .quote-text {
         font-style: italic;
-        color: #c0c0c0;
+        color: #6A1B29; /* Cor Vinho/Bordô */
         text-align: center;
         font-size: 1.2rem;
     }
@@ -174,13 +179,13 @@ st.markdown("<br><br>", unsafe_allow_html=True)
 
 # SEÇÃO 4: RODAPÉ E CONTATO
 st.markdown("""
-<div style='text-align: center; padding: 20px; background-color: #050505; border-top: 1px solid #DAA520;'>
+<div style='text-align: center; padding: 20px; background-color: #FFFFFF; border-top: 1px solid #DAA520;'>
     <h4 style='color: #DAA520;'>A Barreira Intransponível (Rigor Moral)</h4>
-    <p style='font-size: 0.9rem; color: #a0a0a0; max-width: 800px; margin: 0 auto;'>
+    <p style='font-size: 0.9rem; color: #6A1B29; max-width: 800px; margin: 0 auto;'>
         "A Sacrominis recusa absolutamente qualquer obra ou contrato, por mais lucrativo que seja, que vá contra a nobreza da Polícia Militar ou que vilipendie a fé católica."
     </p>
     <br>
-    <p style='color: #FFFFF0;'>Para requerer uma obra ou obter o Certificado de Autenticidade, entre em contato.</p>
+    <p style='color: #6A1B29;'>Para requerer uma obra ou obter o Certificado de Autenticidade, entre em contato.</p>
     <a href="mailto:contato@sacrominis.com" style='color: #DAA520; text-decoration: none; border: 1px solid #DAA520; padding: 10px 20px; border-radius: 3px; display: inline-block; margin-top: 10px;'>Solicitar Contato</a>
 </div>
 """, unsafe_allow_html=True)
